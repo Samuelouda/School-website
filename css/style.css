@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+/*
+$green: #0eb582;
+$light-green: #f0fdfa;
+$light-color: #ffffff;
+$light-white: #eee;
+$black: #444;   ==Find out what $ means in CSS==
+$white: #fff;
+$border: .1rem solid $green);
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); 
+*/
+
+#root {
+    --green: #0eb582;
+    --light-green: #f0fdfa;
+    --light-color: #ffffff;
+    --light-white: #eee;
+    --black: #444;
+    --white: #fff;
+    --border: .1rem solid var(--green);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: var(--black);
+}
+
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: var(--light-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--green);
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    padding: 2rem 10%;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
