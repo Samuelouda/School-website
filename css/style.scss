@@ -11,17 +11,18 @@
     transition: all .2s linear;
 }
 
-/*
+//SCSS uses $ instead of #root to declare stuff we'll use in future
+
 $green: #0eb582;
 $light-green: #f0fdfa;
 $light-color: #ffffff;
 $light-white: #eee;
-$black: #444;   ==Find out what $ means in CSS==
+$black: #444; 
 $white: #fff;
-$border: .1rem solid $green);
+$border: .1rem solid $green;
 $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); 
-*/
 
+/*
 #root {
     --green: #0eb582;
     --light-green: #f0fdfa;
@@ -32,6 +33,7 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     --border: .1rem solid var(--green);
     --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 }
+*/
 
 @mixin grid($val) {
     display: grid;
@@ -42,13 +44,13 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 @mixin titleText($titleSize) {
     font-size: $titleSize;
     text-transform: capitalize;
-    color: var(--black);
+    color: $black;
 }
 
 @mixin graphText($graphSize) {
     font-size: $graphSize;
     line-height: 2;
-    color: var(--light-color);
+    color: $light-color;
 }
 
 html {
@@ -64,15 +66,15 @@ html {
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--green);
+        background: $green;
     }
 }
 
 .header {
     position: sticky;
     top: 0; left: 0; right: 0;
-    background: var(--white);
-    box-shadow: var(--box-shadow);
+    background: $white;
+    box-shadow: $box-shadow;
     padding: 2rem 10%;
     display: flex;
     align-items: center;
