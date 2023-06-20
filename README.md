@@ -3,3 +3,4 @@
 # NOTICE
 	Pictures to be downloaded online from the video on YouTube.
     This website uses SCSS instead of CSS. New experience.
+    use live sass compiler extension to convert the scss to css
