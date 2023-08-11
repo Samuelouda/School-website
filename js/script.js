@@ -1,9 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.getElementById("menu-btn");
-    const navbar = document.querySelector(".navbar");
-  
-    menuButton.addEventListener("click", function () {
-      navbar.classList.toggle("show-menu");
-    });
-  });
-  
+// js/script.js
+document.addEventListener("DOMContentLoaded", function() {
+  var logo = document.querySelector(".logo");
+
+  function updateLogoColor() {
+      if (navigator.onLine) {
+          logo.classList.remove("offline");
+      } else {
+          logo.classList.add("offline");
+      }
+  }
+
+  updateLogoColor();
+
+  window.addEventListener("online", updateLogoColor);
+  window.addEventListener("offline", updateLogoColor);
+});
