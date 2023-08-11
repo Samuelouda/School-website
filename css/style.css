@@ -30,7 +30,7 @@ html::-webkit-scrollbar-thumb {
   left: 0;
   right: 0;
   background: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1 rem rgba(0, 0, 0, 0.1);
   padding: 2rem 10%;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@ html::-webkit-scrollbar-thumb {
   margin-right: auto;
   font-size: 2.5rem;
   text-transform: capitalize;
-  color: #444;
+  color: black;
   font-weight: bolder;
 }
 .header .logo i {
@@ -50,7 +50,7 @@ html::-webkit-scrollbar-thumb {
   margin-right: 2rem;
   font-size: 2rem;
   text-transform: capitalize;
-  color: #444;
+  color: black;
 }
 .header .navbar a:hover {
   color: #0eb582;
@@ -63,48 +63,4 @@ html::-webkit-scrollbar-thumb {
 }
 .header .icons div:hover {
   color: #0eb582;
-}
-.header #menu-btn {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .header {
-    padding: 2rem 5%;
-  }
-}
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-  .header {
-    padding: 2rem;
-  }
-}
-@media (max-width: 768px) {
-  .header #menu-btn {
-    display: inline-block;
-  }
-  .header .navbar {
-    position: fixed;
-    top: 0;
-    right: -105%;
-    width: 30rem;
-    background: #fff;
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-  }
-  .header .navbar a {
-    display: block;
-    margin: 1rem 0;
-    text-align: center;
-    font-size: 3rem;
-  }
-}
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
 }/*# sourceMappingURL=style.css.map */

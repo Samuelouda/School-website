@@ -2,37 +2,32 @@
 
 * {
     font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
     box-sizing: border-box;
-    outline: none;
-    border: none;
+    outline: none; border: none;
     text-decoration: none;
     transition: all .2s linear;
 }
 
-//SCSS uses $ instead of #root to define stuff we'll use in future
-
 $green: #0eb582;
 $light-green: #f0fdfa;
-$light-color: #ffffff;
+$light-color: #777;
 $light-white: #eee;
-$black: #444; 
+$black: #444;
 $white: #fff;
-$border: .1rem solid $green;
-$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1); 
-
+$border: 1rem solid $green;
+$box-shadow: 0 .5rem 1 rem rgba(0,0,0,.1);
 
 @mixin grid($val) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit minmax($val 1fr));
+    grid: 2rem;
 }
 
 @mixin titleText($titleSize) {
     font-size: $titleSize;
     text-transform: capitalize;
-    color: $black;
+    color: black;
 }
 
 @mixin graphText($graphSize) {
@@ -45,15 +40,16 @@ html {
     font-size: 62.5%;
     overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-        width: 1rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem; 
     }
 
-    &::-webkit-scrollbar-track {
+    &::-webkit-scrollbar-track{
         background: transparent;
     }
 
-    &::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb{
         background: $green;
     }
 }
@@ -71,12 +67,13 @@ html {
     .logo {
         margin-right: auto;
         @include titleText(2.5rem);
-        font-weight: bolder;
+        font-weight: bolder;;
 
         i {
             color: $green;
         }
     }
+
     .navbar a {
         margin-right: 2rem;
         @include titleText(2rem);
@@ -91,16 +88,17 @@ html {
         font-size: 2.5rem;
         color: $black;
         margin-left: 1.5rem;
-
+        
         &:hover {
             color: $green;
         }
     }
 
     #menu-btn {
-        display: none;
+        display: ;
     }
 }
+
 
 
 
@@ -115,54 +113,8 @@ html {
 
 
 //media queries
-@media (max-width:1200px) {
-    
-    .header{
-        padding: 2rem 5%;
-    }
-}
-
-@media (max-width:991px) {
-
-    html {
-        font-size: 55%;
-    }
+@media (max-width:1200px){
     .header {
-        padding: 2rem;
-    }
-}
-
-@media (max-width:768px) {
-
-    .header {
-        #menu-btn {
-            display: inline-block;
-        }
-        .navbar {
-            position: fixed;
-            top: 0;
-            right: -105%;
-            width: 30rem;
-            background: $white;
-            //box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
-            height: 100%;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-
-            a {
-                display: block;
-                margin: 1rem 0;
-                text-align: center;
-                font-size: 3rem;
-            }
-        }
-    }
-}
-
-@media (max-width:450px) {
-
-    html {
-        font-size: 50%;
+        padding: 2rem 5%
     }
 }
