@@ -67,7 +67,7 @@ html {
     .logo {
         margin-right: auto;
         @include titleText(2.5rem);
-        font-weight: bolder;;
+        font-weight: bolder;
 
         i {
             color: $green;

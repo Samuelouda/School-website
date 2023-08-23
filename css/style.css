@@ -96,7 +96,3 @@ html::-webkit-scrollbar-thumb {
     padding: 2rem 5%;
   }
 }/*# sourceMappingURL=style.css.map */
-
-#logo.offline {
-  color: #999999; /* Change to the desired offline color */
-}
