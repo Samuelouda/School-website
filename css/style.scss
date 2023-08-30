@@ -6,7 +6,7 @@
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
-    transition: all .2s linear;
+    transition: all .1s linear;
 }
 
 $green: #0eb582;
@@ -15,8 +15,8 @@ $light-color: #777;
 $light-white: #eee;
 $black: #444;
 $white: #fff;
-$border: 1rem solid $green;
-$box-shadow: 0 .5rem 1 rem rgba(0,0,0,.1);
+$border: .1rem solid $green;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 
 @mixin grid($val) {
     display: grid;
@@ -54,6 +54,24 @@ html {
     }
 }
 
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border: $border;
+    border-radius: 4px;
+    background: $light-green;
+    color: $green;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &:hover {
+        background-color: $green;
+        color:$white;
+    }
+}
+
 .header {
     position: sticky;
     top: 0; left: 0; right: 0;
@@ -74,12 +92,28 @@ html {
         }
     }
 
-    .navbar a {
-        margin-right: 2rem;
-        @include titleText(2rem);
+    .navbar {
+        position: relative;
 
-        &:hover {
-            color: $green;
+        #close-navbar {
+            position: absolute;
+            top: 1.5rem; right:2rem;
+            font-size: 4rem;
+            cursor: pointer;
+            color: $black;
+            display: none; 
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+
+        a {
+            margin-right: 2rem;
+            @include titleText(2rem);
+    
+            &:hover {
+                color: $green;
+            }
         }
     }
 
@@ -99,7 +133,90 @@ html {
     }
 }
 
+.account-form {
+    position: fixed;
+    top: 0; right: 0;
+    width: 35rem;
+    background: $white;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100%;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+    z-index: 1200;
+    padding: 2rem;
+    text-align: center;
 
+    #close-form {
+            position: absolute;
+            top: 1.5rem; right:2.5rem;
+            font-size: 4rem;
+            cursor: pointer;
+            color: $black;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+    }
+
+    form {
+        border: $border;
+        padding: 2rem;
+
+        h3 {
+            @include titleText(2.5rem);
+            padding-bottom: .5rem;
+            text-transform: uppercase;
+        }
+
+        .box {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            border: $border;  
+            font-size: 1.6rem;
+            margin:.7rem 0;
+        }
+
+        .flex {
+            padding-top: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            label {
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+            }
+
+            a {
+                font-size: 1.5rem;
+                color: $light-color;
+                margin-left: auto;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $green;
+
+                }
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    .buttons .btn {
+        margin: 0 .5rem;
+
+        &.active {
+            background: $green;
+            color: $white;
+        }
+    }
+}
 
 
 
@@ -130,6 +247,45 @@ html {
     html {
         font-size: 55%;
     }
+
+    .header {
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px) {
+    .header {
+        #menu-btn {
+            display: inline-block;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0; right: -105%;
+            width: 30rem;
+            background: $white;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            z-index: 1200;
+
+            #close-navbar {
+                display: block;
+            }
+
+            &.active {
+                box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+                right: 0;
+            }
+
+            a {
+            display:block;
+            margin: 1rem 0;
+            text-align: center;
+            font-size: 3rem;
+        }
+    }
 }
 
 @media (max-width:450px) {
@@ -137,23 +293,4 @@ html {
         font-size: 50%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//media queries
-@media (max-width:1200px){
-    .header {
-        padding: 2rem 5%
-    }
 }

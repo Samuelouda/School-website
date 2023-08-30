@@ -1,17 +1,10 @@
-// js/script.js
-document.addEventListener("DOMContentLoaded", function() {
-  var logo = document.querySelector(".logo");
+let navbar = document.querySelector('.header .navbar')
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active')
+}
 
-  function updateLogoColor() {
-      if (navigator.onLine) {
-          logo.classList.remove("offline");
-      } else {
-          logo.classList.add("offline");
-      }
-  }
+document.querySelector('#close-navbar').onclick = () =>{
+    navbar.classList.remove('active')
+};
 
-  updateLogoColor();
-
-  window.addEventListener("online", updateLogoColor);
-  window.addEventListener("offline", updateLogoColor);
-});
+let registerBtn = document.querySelector('.account-form .register-btn');
