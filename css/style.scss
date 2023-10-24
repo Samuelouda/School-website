@@ -54,6 +54,10 @@ html {
     }
 }
 
+section {
+    padding: 5rem 10%;
+}
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -68,7 +72,7 @@ html {
 
     &:hover {
         background-color: $green;
-        color:$white;
+        color: $white;
     }
 }
 
@@ -135,7 +139,7 @@ html {
 
 .account-form {
     position: fixed;
-    top: 0; right: 0;
+    top: 0; right: -105%;
     width: 35rem;
     background: $white;
     display: flex;
@@ -143,10 +147,15 @@ html {
     gap: 2rem;
     justify-content: center;
     height: 100%;
-    box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+    //box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
     z-index: 1200;
     padding: 2rem;
     text-align: center;
+
+    &.active {
+        right: 0;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+    }
 
     #close-form {
             position: absolute;
@@ -163,6 +172,11 @@ html {
     form {
         border: $border;
         padding: 2rem;
+        display: none;
+
+        &.active {
+            display: block;
+        }
 
         h3 {
             @include titleText(2.5rem);
@@ -219,7 +233,21 @@ html {
 }
 
 
+.footer {
+    background: $light-green;
 
+    .box-container {
+        @include grid(25rem);
+
+        .box{
+
+            h3{
+                @include titleText(2.2rem);
+                padding: 1rem 0;
+            }
+        }
+    }
+}
 
 
 
@@ -232,6 +260,10 @@ html {
     .header {
         padding: 2rem 5%;
     }
+
+    section {
+        padding: 3rem 5%;
+    }
 }
 
 @media (max-width:991px) {
@@ -242,14 +274,9 @@ html {
     .header {
         padding: 2rem;
     }
-}
-@media (max-width:991px) {
-    html {
-        font-size: 55%;
-    }
 
-    .header {
-        padding: 2rem;
+    section {
+        padding: 2rem 2rem;
     }
 }
 

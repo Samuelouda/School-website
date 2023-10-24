@@ -24,6 +24,10 @@ html::-webkit-scrollbar-thumb {
   background: #0eb582;
 }
 
+section {
+  padding: 5rem 10%;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -103,7 +107,7 @@ html::-webkit-scrollbar-thumb {
 .account-form {
   position: fixed;
   top: 0;
-  right: 0;
+  right: -105%;
   width: 35rem;
   background: #fff;
   display: flex;
@@ -111,10 +115,13 @@ html::-webkit-scrollbar-thumb {
   gap: 2rem;
   justify-content: center;
   height: 100%;
-  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
   z-index: 1200;
   padding: 2rem;
   text-align: center;
+}
+.account-form.active {
+  right: 0;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
 }
 .account-form #close-form {
   position: absolute;
@@ -130,6 +137,10 @@ html::-webkit-scrollbar-thumb {
 .account-form form {
   border: 0.1rem solid #0eb582;
   padding: 2rem;
+  display: none;
+}
+.account-form form.active {
+  display: block;
 }
 .account-form form h3 {
   font-size: 2.5rem;
@@ -176,17 +187,27 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
 }
 
+.footer {
+  background: #f0fdfa;
+}
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit minmax(25rem 1fr));
+  grid: 2rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: black;
+  padding: 1rem 0;
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 2rem 5%;
   }
-}
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-  .header {
-    padding: 2rem;
+  section {
+    padding: 3rem 5%;
   }
 }
 @media (max-width: 991px) {
@@ -195,6 +216,9 @@ html::-webkit-scrollbar-thumb {
   }
   .header {
     padding: 2rem;
+  }
+  section {
+    padding: 2rem 2rem;
   }
 }
 @media (max-width: 768px) {
