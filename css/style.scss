@@ -18,9 +18,10 @@ $white: #fff;
 $border: .1rem solid $green;
 $box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 
+
 @mixin grid($val) {
     display: grid;
-    grid-template-columns: repeat(auto-fit minmax($val 1fr));
+    grid-template-columns: repeat(auto-fit, minmax($val 1fr));
     grid: 2rem;
 }
 
@@ -232,19 +233,34 @@ section {
     }
 }
 
-
-.footer {
-    background: $light-green;
+.footer{
+    background-color: $light-green;
 
     .box-container {
         @include grid(25rem);
 
-        .box{
+        .box {
+            @include titleText(2.2rem);
+            padding: 1rem 0;
 
-            h3{
-                @include titleText(2.2rem);
-                padding: 1rem 0;
+            i {
+                color: $green;
             }
+        }
+        .link {
+            @include graphText(1.7rem);
+            padding: .5rem 0;
+            display: block;
+
+            &:hover {
+                color: $green;
+                text-decoration: underline;
+            }
+        }
+
+        p {
+            @include graphText(1.5rem);
+            padding: 1rem 0;
         }
     }
 }

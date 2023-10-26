@@ -188,17 +188,37 @@ section {
 }
 
 .footer {
-  background: #f0fdfa;
+  background-color: #f0fdfa;
 }
 .footer .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit minmax(25rem 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem 1fr));
   grid: 2rem;
 }
-.footer .box-container .box h3 {
+.footer .box-container .box {
   font-size: 2.2rem;
   text-transform: capitalize;
   color: black;
+  padding: 1rem 0;
+}
+.footer .box-container .box i {
+  color: #0eb582;
+}
+.footer .box-container .link {
+  font-size: 1.7rem;
+  line-height: 2;
+  color: #777;
+  padding: 0.5rem 0;
+  display: block;
+}
+.footer .box-container .link:hover {
+  color: #0eb582;
+  text-decoration: underline;
+}
+.footer .box-container p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
   padding: 1rem 0;
 }
 
