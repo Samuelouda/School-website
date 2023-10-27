@@ -36,3 +36,11 @@ document.querySelector('#account-btn').onclick = () =>{
 document.querySelector('#close-form').onclick = () =>{
     accountForm.classList.remove('active');
 };
+
+//to change bulb logo when the user goes offline
+// to be corrected later
+const logoIcon = document.querySelector('#logo-icon');
+window.addEventListener('offline', () => {
+    logoIcon.classList.remove('fas fa-lightbulb');
+    logoIcon.classList.add('far fa-lighbulb');
+});

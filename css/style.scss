@@ -91,9 +91,15 @@ section {
         margin-right: auto;
         @include titleText(2.5rem);
         font-weight: bolder;
+        color: $green;
+
+        &:hover {
+            color: black;
+        }
 
         i {
             color: $green;
+           // font-family: 'Nunito';
         }
     }
 
@@ -106,7 +112,8 @@ section {
             font-size: 4rem;
             cursor: pointer;
             color: $black;
-            display: none; 
+            display: none;
+             
             &:hover {
                 transform: rotate(90deg);
             }
@@ -238,15 +245,23 @@ section {
 
     .box-container {
         @include grid(25rem);
+        display: flex;
 
         .box {
             @include titleText(2.2rem);
-            padding: 1rem 0;
+            width: 25%;
+            padding: 10px;
 
+            h3 {
+                @include titleText(2.2rem);
+                padding: 1rem 0;
+            }
+            
             i {
                 color: $green;
             }
         }
+        
         .link {
             @include graphText(1.7rem);
             padding: .5rem 0;
@@ -262,6 +277,26 @@ section {
             @include graphText(1.5rem);
             padding: 1rem 0;
         }
+
+        .email {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.6rem;
+            border: $border;
+            border-radius: 7px;
+            margin-bottom: 1rem;
+        }
+    }
+}
+.credit {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 3rem;
+    @include titleText(2rem);
+    border-top: $border;
+
+    span {
+        color: $green;
     }
 }
 
@@ -328,10 +363,11 @@ section {
         }
     }
 }
+}
+
 
 @media (max-width:450px) {
     html {
         font-size: 50%;
     }
-}
 }
