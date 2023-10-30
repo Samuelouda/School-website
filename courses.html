@@ -2,12 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our Courses: School Website</title>
+
+    <!--- TITLEBAR ICON--->
+    <link rel="shortcut icon" type="image" href="images/download.png">
+    <!--====CSS  Link file ====-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--== Font Awesome CDN ==-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--== Custom  -->
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Veritatis harum molestias temporibus cum porro illum necessitatibus odit provident, velit eos fuga quas incidunt perspiciatis earum rem.
-         Voluptatum inventore eius itaque.</p>
+    <!-- == Header Section == -->
+    <header class="header">
+        <!-- Inside the header section -->
+    <a href="#" class="logo"><i id="logo-icon" class="fas fa-lightbulb"></i> Wahundura High School</a>
+    
+    <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="icons"> 
+            <div id="account-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
+            
+        </div>
+
+
+    </header>
+
+    <!----ACCOUNT SECTION-->
+        <div class="account-form">
+
+            <div id="close-form" class="fas fa-times"></div>
+
+            <div class="buttons">
+                <span class="btn active login-btn">Login</span>
+                <span class="btn register-btn">Register</span>
+            </div>
+
+            <form action=""  class="login-form active">
+                <h3>Login</h3>
+                <input type="email" placeholder="type your email" name="" id="" class="box">
+                <input type="password" name="" placeholder="type your password" class="box" id="">
+                <div class="flex">
+                    <input type="checkbox" name="" id="remember-me" style="accent-color: lightgreen;">
+                    <label for="remember-me">Remember me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <input type="submit" value="login now" class="btn">
+            </form>
+
+            <form action="" class="register-form">
+                <h3>Register</h3>
+                <input type="email" placeholder="Type your email" name="" id="" class="box">
+                <input type="password" name="" placeholder="Type your password" class="box" id="">
+                <input type="password" name="" placeholder="Confirm your password" class="box" id="">
+                <input type="submit" value="Register Now" class="btn">
+            </form>
+
+        </div>
+        <!--END OF ACCOUNT SECTION-->
+
+        <!---- footer section starts here ---->
+
+        <section class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3><i class="fas fa-lightbulb"></i> WHS</h3>
+                    <p>A school made to tailor your Student to achieve High performance and career Skills</p>
+                    <div class="share">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="twitter.com/BabyLilboss" class="fab fa-twitter"></a>
+                        <a href="instagram.com/lilboss.baby" class="fab fa-instagram"></a>
+                        <a href="facebook.com/Lilboss01?mibextid=ZbWKwL" class="fab fa-linkedin"></a>
+                        <a href="https:wa.me/254753670115" class="fab fa-whatsapp"></a>
+                    </div>
+                </div>
+                            
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="home.html" class="link">Home</a>
+                    <a href="about.html" class="link">About</a>
+                    <a href="courses.html" class="link">Courses</a>
+                    <a href="contact.html" class="link">Contact</a>
+                </div>
+ 
+                <div class="box">
+                    <h3>Useful Links</h3>
+                    <a href="#" class="link">Help center</a>
+                    <a href="#" class="link">Ask Questions</a>
+                    <a href="#" class="link">Send Feedback</a>
+                    <a href="#" class="link">Terms of use</a>
+                </div>
+
+                <div class="box">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe our Newsletter for latest updates</p>
+                    <form action="">
+                        <input type="email" name="" id="" placeholder="Enter your email" class="email">
+                        <input type="submit" value="Subscribe" class="btn">
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="credit">
+                Created by <span>Samuel Ouda</span> | All rights Reserved
+            </div>
+
+        </section>
+
+        <!---- footer section ends here ---->
+
+
+        <!--== custom JS ==-->
+    <script src="js/script.js"></script>
 </body>
 </html>

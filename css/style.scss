@@ -261,6 +261,26 @@ section {
                 color: $green;
             }
         }
+
+        .share {
+            margin-top: 1rem;
+
+            a{
+                height: 4.5rem;
+                width: 4rem;
+                line-height: 4.5rem;
+                font-size: 3rem;
+                background-color: $green;
+                color: white;
+                margin-right: .3rem;
+                text-align: center;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: $black;
+                }
+            }
+        }
         
         .link {
             @include graphText(1.7rem);

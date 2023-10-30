@@ -216,6 +216,23 @@ section {
 .footer .box-container .box i {
   color: #0eb582;
 }
+.footer .box-container .share {
+  margin-top: 1rem;
+}
+.footer .box-container .share a {
+  height: 4.5rem;
+  width: 4rem;
+  line-height: 4.5rem;
+  font-size: 3rem;
+  background-color: #0eb582;
+  color: white;
+  margin-right: 0.3rem;
+  text-align: center;
+  border-radius: 4px;
+}
+.footer .box-container .share a:hover {
+  background-color: #444;
+}
 .footer .box-container .link {
   font-size: 1.7rem;
   line-height: 2;
