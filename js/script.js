@@ -51,3 +51,29 @@ emailInput.addEventListener('input', function() {
     submitButton.disabled = false;
   }
 });
+
+
+// Get the login and register forms.
+const loginForm = document.querySelector('.login-form');
+const registerForm = document.querySelector('.register-form');
+
+// Get the submit buttons.
+const loginSubmitButton = loginForm.querySelector('input[type="submit"]');
+const registerSubmitButton = registerForm.querySelector('input[type="submit"]');
+
+// Disable the submit buttons if the input boxes are empty.
+loginForm.addEventListener('input', function() {
+  // Check if any of the input boxes are empty.
+  const areInputsEmpty = loginForm.querySelectorAll('input').every(input => input.value === '');
+
+  // Disable the submit button if the input boxes are empty.
+  loginSubmitButton.disabled = areInputsEmpty;
+});
+
+registerForm.addEventListener('input', function() {
+  // Check if any of the input boxes are empty.
+  const areInputsEmpty = registerForm.querySelectorAll('input').every(input => input.value === '');
+
+  // Disable the submit button if the input boxes are empty.
+  registerSubmitButton.disabled = areInputsEmpty;
+});
