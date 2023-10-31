@@ -37,10 +37,17 @@ document.querySelector('#close-form').onclick = () =>{
     accountForm.classList.remove('active');
 };
 
-//to change bulb logo when the user goes offline
-// to be corrected later
-const logoIcon = document.querySelector('#logo-icon');
-window.addEventListener('offline', () => {
-    logoIcon.classList.remove('fas fa-lightbulb');
-    logoIcon.classList.add('far fa-lighbulb');
+// Get the email address input field.
+var emailInput = document.querySelector('input.email');
+
+// Get the submit button.
+var submitButton = document.querySelector('input.btn');
+
+// Disable the submit button if there is no email address.
+emailInput.addEventListener('input', function() {
+  if (emailInput.value === '') {
+    submitButton.disabled = true;
+  } else {
+    submitButton.disabled = false;
+  }
 });
