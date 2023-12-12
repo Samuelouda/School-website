@@ -217,9 +217,10 @@ section {
   color: #0eb582;
 }
 .footer .box-container .share {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .footer .box-container .share a {
+  margin-top: 3px;
   height: 4.5rem;
   width: 4rem;
   line-height: 4.5rem;
