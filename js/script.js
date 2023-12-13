@@ -6,7 +6,12 @@ document.querySelector('#menu-btn').onclick = () =>{
 
 document.querySelector('#close-navbar').onclick = () =>{
     navbar.classList.remove('active');
-};
+}
+ //make the other part of the body unclickable when form is active
+    //if click anywhere on the body apart from form, the form closes
+  /*document.querySelector('body').onclick = () => {
+    navbar.classList.remove('active');
+  };*/
 
 let registerBtn = document.querySelector('.account-form .register-btn');
 let loginBtn = document.querySelector('.account-form .login-btn');
