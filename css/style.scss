@@ -270,8 +270,8 @@ section {
   }
 }
 
-.swiper-pagination-bullet-active {
-  background: $green;
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: $green;
 }
 
 

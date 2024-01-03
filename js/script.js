@@ -89,7 +89,7 @@ registerForm.addEventListener("input", function () {
   registerSubmitButton.disabled = areInputsEmpty;
 });
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".home-slider", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

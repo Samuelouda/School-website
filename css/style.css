@@ -217,8 +217,8 @@ section {
   padding: 1rem 0;
 }
 
-.swiper-pagination-bullet-active {
-  background: #0eb582;
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: #0eb582;
 }
 
 .footer {
