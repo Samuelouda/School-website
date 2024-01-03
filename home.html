@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!--== Font Awesome CDN ==-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!--== SwiperJS css  -->
+    <!--== Swiper css  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 </head>
 
@@ -78,9 +78,9 @@
     <!-- HOME SECTION STARTS -->
 
     <section class="home">
-        <div class="home-slider">
-            <div class="w">
-                <section class="slide" style="background: url(images/a.jpg) no-repeat;"> <!--//image 1-->
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <section class="swiper-slide slide" style="background: url(images/a.jpg) no-repeat;"> <!--//image 1-->
                     <div class="content">
                         <h3>the best courses you will find here!</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -90,7 +90,7 @@
                     </div>
                 </section>
 
-                <section class="slide" style="background: url(images/shaply-works-slammed86.jpg) no-repeat;">
+                <section class="swiper-slide slide" style="background: url(images/shaply-works-slammed86.jpg) no-repeat;">
                     <!--//image 2-->
                     <div class="content">
                         <h3>the best courses you will find here!</h3>
@@ -101,7 +101,7 @@
                     </div>
                 </section>
 
-                <section class="slide" style="background: url(images/yj.jpg) no-repeat;"> <!--//image 3-->
+                <section class="swiper-slide slide" style="background: url(images/yj.jpg) no-repeat;"> <!--//image 3-->
                     <div class="content">
                         <h3>the best courses you will find here!</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -112,12 +112,33 @@
                 </section>
 
             </div>
+
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
     <!--  HOME SECTION ENDS -->
 
+<!--subject section starts here--> 
 
+<section class="subjects">
+    <h1 class="heading">Our Popular subjects</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="" alt="">
+            <h3>graphic design</h3>
+            <p>12 modules</p>
+        </div>
+
+        <div class="box">
+            <img src="" alt="">
+            <h3>graphic design</h3>
+            <p>12 modules</p>
+        </div>
+    </div>
+</section>
+
+<!--subject section ends here--> 
 
 
 
@@ -177,7 +198,8 @@
 
     <!---- footer section ends here ---->
 
-
+    <!-- SwiperJS link -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!--== custom JS ==-->
     <script src="js/script.js"></script>
 </body>

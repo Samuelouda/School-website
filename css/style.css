@@ -217,6 +217,10 @@ section {
   padding: 1rem 0;
 }
 
+.swiper-pagination-bullet-active {
+  background: #0eb582;
+}
+
 .footer {
   background-color: #f0fdfa;
 }
@@ -348,6 +352,10 @@ section {
     font-size: 3rem;
   }
 }
+.home .slide .content {
+  font-size: 3rem;
+}
+
 @media (max-width: 450px) {
   html {
     font-size: 50%;

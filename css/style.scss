@@ -270,7 +270,9 @@ section {
   }
 }
 
-
+.swiper-pagination-bullet-active {
+  background: $green;
+}
 
 
 .footer {
@@ -415,6 +417,10 @@ section {
       }
     }
   }
+}
+
+.home .slide .content {
+  font-size: 3rem;
 }
 
 @media (max-width: 450px) {

@@ -88,3 +88,12 @@ registerForm.addEventListener("input", function () {
   // Disable the submit button if the input boxes are empty.
   registerSubmitButton.disabled = areInputsEmpty;
 });
+
+var swiper = new Swiper(".mySwiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop:true,
+  grabCursor:true,
+});
