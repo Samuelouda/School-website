@@ -244,6 +244,35 @@ section {
   }
 }
 
+.home {
+  padding: 0;
+
+  .slide{
+    display: flex;
+    align-items: center;
+    height: 60rem;
+    background-size: cover !important;
+
+    .content {
+      width: 50rem;
+
+      h3 {
+        @include titleText(5rem);
+        color: $white;
+      }
+
+      p {
+        @include graphText(1.6rem);
+        color: $light-white;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+
+
+
 .footer {
   background-color: $light-green;
 
