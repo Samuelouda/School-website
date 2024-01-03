@@ -59,6 +59,12 @@ section {
   padding: 5rem 10%;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  @include titleText(3.5rem);
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -274,6 +280,35 @@ section {
   background-color: $green;
 }
 
+.subjects {
+  @include grid(16rem);
+
+  .box-container {
+    @include grid(16rem);
+
+    .box {
+      padding: 3rem 2rem;
+      text-align: center;
+      border: $border;
+      background: $light-green;
+      cursor: pointer;
+
+      img {
+        height: 10rem;
+        margin-bottom: .7rem;
+      }
+
+      h3 {
+        @include titleText(2rem);
+        padding: .5rem 0;
+      }
+
+      p{
+        @include graphText(1.5rem);
+      }
+    }
+  }
+}
 
 .footer {
   background-color: $light-green;
@@ -427,4 +462,8 @@ section {
   html {
     font-size: 50%;
   }
+  .heading {
+    font-size: 3rem;
+  }
+
 }
